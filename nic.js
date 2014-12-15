@@ -11,7 +11,7 @@ module.exports.IPs = function() {
   Object.keys(networkInterfaces).forEach(function(nic) {
     for(var s = 0; s < networkInterfaces[nic].length; s++) {
       if (!networkInterfaces[nic][s].internal && networkInterfaces[nic][s].family == 'IPv4') {
-        ips[n] = networkInterfaces[nic][0].address;
+        ips[n] = networkInterfaces[nic][s].address;
         nics[n] = nic;
         n++;
       }
