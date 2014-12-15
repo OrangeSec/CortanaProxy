@@ -29,5 +29,6 @@ module.exports.listen = function(ips, ip) {
     }
   }).listen(53, ip);
 
-  console.log('[*] DNS www.bing.com -> ' + ip);
+  console.log('[*] DNS server listening on ' + ip + ':53');
+  console.log('[*] DNS www.bing.com -> ' + ips);
 }

@@ -14,5 +14,5 @@ if (ips.length > 1) {
 }
 
 dns.listen(ips, ip);
-proxy.listen(ip);
 ca.listen(8888, ip);
+proxy.listen(ip);

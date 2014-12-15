@@ -51,7 +51,7 @@ module.exports.listen = function(ip) {
     });
 
   }).listen(443, ip);
-  console.log('[*] https redirect listening on ' + ip + ':443');
+  console.log('[*] HTTPS forwarding listening on ' + ip + ':443');
 
   var httpProxy = http.createServer(function(request, response) {
     var optpro = {
@@ -77,5 +77,5 @@ module.exports.listen = function(ip) {
       proxy_request.end();
     });
   }).listen(80, ip);
-  console.log('[*] http redirect listening on ' + ip + ':80');
+  console.log('[*] HTTP forwarding listening on ' + ip + ':80');
 }
