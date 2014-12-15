@@ -24,10 +24,12 @@ module.exports.IPs = function() {
       console.log('(' + i + ') ' + nics[i] + ' ' + ips[i]);
     }
     console.log('(' + i + ') All');
+
     var input;
     do {
       input = readlineSync.question('Choose one interface: ');
     } while(input > n || input < 0);
+
     if (input == n)
       cortanalocalIP = ips;
     else

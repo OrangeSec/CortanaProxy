@@ -12,11 +12,15 @@ var httpsopt = {
 
 module.exports.listen = function(ip) {
   var httpsProxy = https.createServer(httpsopt, function(request, response) {
-    var phrase = urls.parse(request.url, true).query.q || '';
-    var usersaid = urls.parse(request.url, true).query.usersaid || '';
+    var getopt = urls.parse(request.url, true).query;
+    var phrase = getopt.q || '';
+    var usersaid = getopt.usersaid || '';
+
     if (usersaid != '' && phrase != '') {
       var actions = JSON.parse(fs.readFileSync('conf.json')).actions;
+
       console.log('[+] You said: ' + phrase);
+
       for(var i = 0; i < actions.length; i++) {
         if (actions[i].keyword == phrase) {
           var res = disp(phrase, actions[i].answer, request.headers, actions[i].exec);
@@ -34,23 +38,32 @@ module.exports.listen = function(ip) {
       method: request.method,
       headers: request.headers
     };
+
     var proxy_request = https.request(optpro, function(proxy_response) {
       proxy_response.on('data', function(chunk) {
         response.write(chunk, 'binary');
       });
+
       proxy_response.on('end', function() {
         response.end();
       });
+
       response.writeHead(proxy_response.statusCode, proxy_response.headers);
     });
+
     request.on('data', function(chunk) {
       proxy_request.write(chunk, 'binary');
     });
+
     request.on('end', function() {
       proxy_request.end();
     });
 
+    proxy_request.on('error', function(e) {
+      console.log('[-] HTTPS ' + e);
+    });
   }).listen(443, ip);
+
   console.log('[*] HTTPS forwarding listening on ' + ip + ':443');
 
   var httpProxy = http.createServer(function(request, response) {
@@ -61,21 +74,31 @@ module.exports.listen = function(ip) {
       method: request.method,
       headers: request.headers
     };
+
     var proxy_request = http.request(optpro, function(proxy_response) {
       proxy_response.on('data', function(chunk) {
         response.write(chunk, 'binary');
       });
+
       proxy_response.on('end', function() {
         response.end();
       });
+
       response.writeHead(proxy_response.statusCode, proxy_response.headers);
     });
+
     request.on('data', function(chunk) {
       proxy_request.write(chunk, 'binary');
     });
+
     request.on('end', function() {
       proxy_request.end();
     });
+
+    proxy_request.on('error', function(e) {
+      console.log('[-] HTTP ' + e);
+    });
   }).listen(80, ip);
+
   console.log('[*] HTTP forwarding listening on ' + ip + ':80');
 }

@@ -9,16 +9,18 @@ module.exports.listen = function(ips, ip) {
       for (var i = 0; i < ips.length; i++) {
         res.answer.push({ name: 'www.bing.com', type: 'A', data: ips[i], 'ttl': ttl });
       }
+
       res.end();
     } else {
       dns.resolve(req.question[0].name, function(err, addresses) {
         if (addresses) {
           var question = res.question[0],
-            hostname = question.name,
-            length = hostname.length;
-            for (var i = 0; i < addresses.length; i++) {
-              res.answer.push({ name: hostname, type: 'A', data: addresses[i], 'ttl': ttl });
-            }
+              hostname = question.name,
+              length = hostname.length;
+            
+          for (var i = 0; i < addresses.length; i++) {
+            res.answer.push({ name: hostname, type: 'A', data: addresses[i], 'ttl': ttl });
+          }
         }
         res.end();
       });

@@ -16,3 +16,7 @@ if (ips.length > 1) {
 dns.listen(ips, ip);
 ca.listen(8888, ip);
 proxy.listen(ip);
+
+process.on('uncaughtException', function(e) {
+  console.log('[E] ' + e);
+});

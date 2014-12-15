@@ -16,5 +16,6 @@ module.exports.listen = function(port, ip) {
       }
     });
   }).listen(port, ip);
+
   console.log('[*] CA server listening on ' + ip + ':' + port);
 }
