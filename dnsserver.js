@@ -16,12 +16,8 @@ module.exports.listen = function(ips, ip) {
           var question = res.question[0],
             hostname = question.name,
             length = hostname.length;
-            if (Array.isArray(addresses)) {
-              for (var i = 0; i < addresses.length; i++) {
-                res.answer.push({ name: hostname, type: 'A', data: addresses[i], 'ttl': ttl });
-              }
-            } else {
-              res.answer.push({ name: hostname, type: 'A', data: addresses, 'ttl': ttl });
+            for (var i = 0; i < addresses.length; i++) {
+              res.answer.push({ name: hostname, type: 'A', data: addresses[i], 'ttl': ttl });
             }
         }
         res.end();
