@@ -1,0 +1,14 @@
+{
+  "actions": [
+    {
+      "keyword": "turn on the lamp",
+      "answer": "Turned on",
+      "exec": "echo 1 > /dev/ttyS0"
+    },
+    {
+      "keyword": "turn off the lamp",
+      "answer": "Turned off",
+      "exec": "echo 0 > /dev/ttyS0"
+    }
+  ]
+}

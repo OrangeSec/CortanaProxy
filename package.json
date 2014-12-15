@@ -1,0 +1,16 @@
+{
+  "name": "CortanaProxy",
+  "description": "Server for intercepting Cortana's requests (Windows Phone 8.1)",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node ./bin/cortanaproxy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OrangeSec/CortanaProxy.git"
+  },
+  "dependencies": {
+    "dnsd": "^0.9.5",
+    "readline-sync": "^0.4.10"
+  }
+}

@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+
+var proxy = require('../proxy');
+var dns   = require('../dnsserver');
+var nic   = require('../nic');
+var ca    = require('../caserver');
+
+var ips = nic.IPs();
+
+if (ips.length > 1) {
+  ip = '0.0.0.0';
+} else {
+  ip = ips[0];
+}
+
+dns.listen(ips, ip);
+proxy.listen(ip);
+ca.listen(8888, ip);

@@ -1,0 +1,63 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            91:8e:30:60:10:36:86:74
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=IT, ST=Torino, O=OrangeSec, OU=OrangeSec Team, CN=Cortana Proxy/emailAddress=theorangesec@gmail.com
+        Validity
+            Not Before: Dec 11 11:44:36 2014 GMT
+            Not After : Dec 11 11:44:36 2015 GMT
+        Subject: C=IT, ST=Torino, L=Ivrea, O=OrangeSec, OU=OrangeSec Team, CN=www.bing.com/emailAddress=theorangesec@gmail.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:d8:08:32:eb:d2:4c:dc:d4:47:e1:84:fc:39:5b:
+                    10:fe:6c:a9:25:d9:1e:49:69:f9:90:8d:93:d8:36:
+                    f7:93:d4:6c:41:e6:fd:eb:59:fb:8b:2f:ac:23:4b:
+                    35:fe:aa:6c:30:7c:9c:fa:54:96:3d:8e:41:df:09:
+                    dc:a3:07:34:13:ba:f0:e8:9e:9c:76:61:c3:90:ae:
+                    10:dd:40:49:0d:73:9c:4f:c9:86:2c:33:9f:b1:fd:
+                    14:50:6b:bc:88:86:ab:ed:b4:58:b1:30:74:05:a4:
+                    a0:bc:5e:3b:9b:46:41:b6:8b:24:1a:e5:3c:cb:b0:
+                    ec:50:b2:b5:dc:51:af:1e:69
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                OpenSSL Generated Certificate
+            X509v3 Subject Key Identifier: 
+                35:92:1B:CA:93:FD:1D:2D:36:48:60:26:D3:53:B1:54:EE:52:DF:CB
+            X509v3 Authority Key Identifier: 
+                keyid:3C:A6:06:C9:ED:11:DA:7F:E3:7F:C6:E0:25:25:C6:50:3C:F8:BD:B1
+
+    Signature Algorithm: sha1WithRSAEncryption
+         75:d6:6a:f5:fa:51:a9:9c:7d:0e:34:03:5d:3e:7e:69:c4:6c:
+         4f:fd:72:cf:4b:c4:61:f5:08:f8:51:8c:3f:e5:13:6d:66:0a:
+         92:d9:b6:70:79:e6:9a:01:87:cb:20:b9:5b:24:78:c4:41:78:
+         66:e6:24:f9:f6:be:23:9c:fc:4b:dc:6a:fd:74:af:08:26:9c:
+         30:d8:11:7f:c5:bd:5f:71:59:07:4b:bb:e5:51:1b:78:de:d9:
+         1e:79:57:48:be:54:6e:40:56:cb:87:40:01:65:77:9c:42:e4:
+         82:6e:f7:6e:84:4c:12:67:d1:16:a6:17:e7:85:32:71:c5:62:
+         5b:5f
+-----BEGIN CERTIFICATE-----
+MIIDHjCCAoegAwIBAgIJAJGOMGAQNoZ0MA0GCSqGSIb3DQEBBQUAMIGKMQswCQYD
+VQQGEwJJVDEPMA0GA1UECAwGVG9yaW5vMRIwEAYDVQQKDAlPcmFuZ2VTZWMxFzAV
+BgNVBAsMDk9yYW5nZVNlYyBUZWFtMRYwFAYDVQQDDA1Db3J0YW5hIFByb3h5MSUw
+IwYJKoZIhvcNAQkBFhZ0aGVvcmFuZ2VzZWNAZ21haWwuY29tMB4XDTE0MTIxMTEx
+NDQzNloXDTE1MTIxMTExNDQzNlowgZkxCzAJBgNVBAYTAklUMQ8wDQYDVQQIDAZU
+b3Jpbm8xDjAMBgNVBAcMBUl2cmVhMRIwEAYDVQQKDAlPcmFuZ2VTZWMxFzAVBgNV
+BAsMDk9yYW5nZVNlYyBUZWFtMRUwEwYDVQQDDAx3d3cuYmluZy5jb20xJTAjBgkq
+hkiG9w0BCQEWFnRoZW9yYW5nZXNlY0BnbWFpbC5jb20wgZ8wDQYJKoZIhvcNAQEB
+BQADgY0AMIGJAoGBANgIMuvSTNzUR+GE/DlbEP5sqSXZHklp+ZCNk9g295PUbEHm
+/etZ+4svrCNLNf6qbDB8nPpUlj2OQd8J3KMHNBO68OienHZhw5CuEN1ASQ1znE/J
+hiwzn7H9FFBrvIiGq+20WLEwdAWkoLxeO5tGQbaLJBrlPMuw7FCytdxRrx5pAgMB
+AAGjezB5MAkGA1UdEwQCMAAwLAYJYIZIAYb4QgENBB8WHU9wZW5TU0wgR2VuZXJh
+dGVkIENlcnRpZmljYXRlMB0GA1UdDgQWBBQ1khvKk/0dLTZIYCbTU7FU7lLfyzAf
+BgNVHSMEGDAWgBQ8pgbJ7RHaf+N/xuAlJcZQPPi9sTANBgkqhkiG9w0BAQUFAAOB
+gQB11mr1+lGpnH0ONANdPn5pxGxP/XLPS8Rh9Qj4UYw/5RNtZgqS2bZweeaaAYfL
+ILlbJHjEQXhm5iT59r4jnPxL3Gr9dK8IJpww2BF/xb1fcVkHS7vlURt43tkeeVdI
+vlRuQFbLh0ABZXecQuSCbvduhEwSZ9EWphfnhTJxxWJbXw==
+-----END CERTIFICATE-----
