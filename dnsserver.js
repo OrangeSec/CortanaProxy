@@ -11,7 +11,7 @@ module.exports.listen = function(ips, ip) {
       }
       res.end();
     } else {
-      dns.lookup(req.question[0].name, function(err, addresses) {
+      dns.resolve(req.question[0].name, function(err, addresses) {
         if (addresses) {
           var question = res.question[0],
             hostname = question.name,
