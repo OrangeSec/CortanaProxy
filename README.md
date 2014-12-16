@@ -3,6 +3,8 @@ CortanaProxy
 
 Server for intercepting Cortana's requests (Windows Phone 8.1)
 
+Home automation demo: https://www.youtube.com/watch?v=iJgrQ9AUDdc
+
 # How to
 
 ### Setup the nodejs server
