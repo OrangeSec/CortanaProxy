@@ -22,7 +22,7 @@ module.exports.listen = function(ip) {
       console.log('[+] You said: ' + phrase);
 
       for(var i = 0; i < actions.length; i++) {
-        if (actions[i].keyword == phrase) {
+        if (actions[i].keyword.toLowerCase() == phrase) {
           var res = disp(phrase, actions[i].answer, request.headers, actions[i].exec);
           response.write(res, 'binary');
           response.end();
